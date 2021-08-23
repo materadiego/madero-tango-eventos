@@ -1,0 +1,149 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  min-height: 568px;
+  max-height: 740px;
+  background-image: url(../images/hero.webp);
+  background-size: 402%;
+  background-position: 60% top;
+  background-repeat: no-repeat;
+  background-color: black;
+  @include flex;
+  @include media(mobile-l) {
+  }
+  @include media(mobile-xl) {
+    min-height: 700px;
+    max-height: 1024px;
+  }
+  @include media(tablet) {
+    min-height: 700px;
+    max-height: 850px;
+    background-size: 282%;
+    align-items: flex-start;
+  }
+  @include media(desktop-s) {
+    background-size: 148%;
+    background-position: center;
+    max-height: 700px;
+    min-height: 600px;
+    align-items: center;
+  }
+  @include media(desktop-m) {
+    background-size: 125%;
+  }
+  @include media(desktop-l) {
+    background-size: 112%;
+    max-height: 800px;
+  }
+  &--container {
+    width: 85%;
+    height: 420px;
+    margin-top: 30px;
+    flex-direction: column;
+    @include flex;
+    @include media(mobile-l) {
+      height: 390px;
+    }
+    @include media(mobile-xl) {
+    }
+    @include media(tablet) {
+      width: 70%;
+      height: 500px;
+      justify-content: center;
+      margin-top: 200px;
+    }
+    @include media(desktop-s) {
+      margin-top: 30px;
+    }
+    &--title {
+      font-size: 1.5em;
+      margin: 0 0 0;
+      text-align: center;
+      color: $color-claro;
+      @include media(mobile-l) {
+        margin: 0;
+      }
+      @include media(tablet) {
+        font-size: 1.3em;
+      }
+      @include media(desktop-s) {
+        margin: 40px 0 0;
+        font-size: 1.25em;
+      }
+    }
+    &--line {
+      @include line-white;
+    }
+    &--subtitle {
+      font-weight: 400;
+      font-size: 3.5em;
+      margin: 0 0 2.5rem;
+      line-height: 120%;
+      text-align: center;
+      color: $color-claro;
+      font-family: $Fuente2;
+      @include media(tablet) {
+        font-size: 2.3em;
+      }
+      @include media(desktop-s) {
+        font-size: 2.375em;
+      }
+    }
+    &--contacto {
+      width: 100%;
+      margin-top: 0px;
+      @include flex;
+      @include media(tablet) {
+        width: 470px;
+        height: 130px;
+        margin-top: 40px;
+      }
+      & a {
+        width: 240px;
+        padding: 10px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: 0.3s;
+        will-change: transform scale;
+        border: 2px solid $color-claro;
+        @include media(mobile-l) {
+          width: 300px;
+        }
+        @include media(mobile-xl) {
+          width: 330px;
+        }
+        @include media(tablet) {
+          height: 100px;
+          width: 500px;
+        }
+        & figure {
+          width: 70px;
+          height: 70px;
+          margin: 0 0.25rem 0 0;
+          background-image: url(../images/hero-wsp.png);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          @include media(tablet) {
+            height: 70px;
+            margin: 0 1.25rem 0 0;
+          }
+        }
+        & p {
+          font-size: 1.7em;
+          margin: 0;
+          color: $color-claro;
+          font-family: $Fuente3;
+          @include media(tablet) {
+            font-size: 1.375em;
+          }
+        }
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+}
